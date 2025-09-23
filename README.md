@@ -1,0 +1,1 @@
+This course is a project-based exploration into iOS mobile app development focusing on the design and implementation of RESTful API clients.
