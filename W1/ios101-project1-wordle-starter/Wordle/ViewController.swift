@@ -40,9 +40,9 @@ class ViewController: UIViewController {
     // END YOUR CODE HERE
     
     // TESTING for Exercise 8
-    if let goalWord = WordGenerator.generateRandomWord() {
-          print("Goal Word: \(goalWord)")
-    }
+//    if let goalWord = WordGenerator.generateRandomWord() {
+//          print("Goal Word: \(goalWord)")
+//    }
     
   }
 }
