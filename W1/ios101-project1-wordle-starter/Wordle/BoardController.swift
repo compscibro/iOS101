@@ -64,7 +64,8 @@ class BoardController: NSObject,
     // Tip: Checkout the public methods on LetterCell.swift
     // Checkpoint: After finishing this exercise, you should now be able to tap on the delete keyboard cell and have the last letter deleted on the board! If it's not working, check your work on this exercise and make sure deleteLastCharacter() is called properly in exercise 3.
     // START YOUR CODE HERE
-    
+    cell.clearLetter()
+    cell.set(style: .initial)
     // END YOUR CODE HERE
   }
 }
