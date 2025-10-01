@@ -62,7 +62,9 @@ class BoardController: NSObject,
   // Checkpoint: Correctly implementing this should allow you to change the number of letters in the goal word!
   private func applyNumLettersSettings(with settings: [String: Any]) {
     // START YOUR CODE HERE
-    // ...
+    if let n = settings[kNumLettersKey] as? Int {
+          numItemsPerRow = n
+    }
     // END YOUR CODE HERE
   }
   
@@ -74,7 +76,9 @@ class BoardController: NSObject,
   // Checkpoint: Correctly implementing this should allow you to change the number of rows in the board!
   private func applyNumGuessesSettings(with settings: [String: Any]) {
     // START YOUR CODE HERE
-    // ...
+    if let r = settings[kNumGuessesKey] as? Int {
+          numRows = r
+    }
     // END YOUR CODE HERE
   }
   
@@ -87,7 +91,9 @@ class BoardController: NSObject,
   // to check the before/after value of goalWord and see if it changes to the correct theme
   private func applyThemeSettings(with settings: [String: Any]) {
     // START YOUR CODE HERE
-    // ...
+    if let raw = settings[kWordThemeKey] as? String, let theme = WordTheme(rawValue: raw) {
+            goalWord = WordGenerator.generateGoalWord(with: theme)
+    }
     // END YOUR CODE HERE
   }
   
