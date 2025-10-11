@@ -19,6 +19,10 @@ The following **optional** features are implemented:
 
 - [x] User should be able to restart the game after they've finished answering all questions
 
+The following **additional** features are implemented:
+
+- [x] An app icon is available
+
 ## Video Walkthrough
 <div>
     <a href="https://www.loom.com/share/f983f5bedb0345d3a1e0c8e850423c99"></a>
