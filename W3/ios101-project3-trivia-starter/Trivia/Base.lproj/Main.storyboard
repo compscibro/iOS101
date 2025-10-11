@@ -59,6 +59,9 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="optionA"/>
+                                                <connections>
+                                                    <action selector="choiceTapped:" destination="K9y-IC-dff" eventType="touchUpInside" id="JpV-UD-uE9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmt-dn-c8G">
                                                 <rect key="frame" x="0.0" y="54" width="370" height="38"/>
@@ -66,6 +69,9 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="optionB"/>
+                                                <connections>
+                                                    <action selector="choiceTapped:" destination="K9y-IC-dff" eventType="touchUpInside" id="cUl-U8-HUU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnN-0m-NGw">
                                                 <rect key="frame" x="0.0" y="108" width="370" height="38"/>
@@ -74,7 +80,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="optionC"/>
                                                 <connections>
-                                                    <outletCollection property="choiceButtons" destination="jmt-dn-c8G" id="fhH-Az-Aw4"/>
+                                                    <action selector="choiceTapped:" destination="K9y-IC-dff" eventType="touchUpInside" id="8eA-JM-jrt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ba-LY-fzj">
@@ -84,7 +90,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="optionD"/>
                                                 <connections>
-                                                    <outletCollection property="choiceButtons" destination="jmt-dn-c8G" id="TSg-BI-ct0"/>
+                                                    <action selector="choiceTapped:" destination="K9y-IC-dff" eventType="touchUpInside" id="xdV-tv-Kxk"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -104,10 +110,10 @@
                     <connections>
                         <outlet property="headerLabel" destination="wIi-3D-Qp2" id="lnT-sd-nVe"/>
                         <outlet property="questionLabel" destination="ccF-3Q-H8t" id="vn4-Qk-je6"/>
-                        <outletCollection property="choiceButtons" destination="TvX-5b-E8C" collectionClass="NSMutableArray" id="XIj-A9-kVi"/>
-                        <outletCollection property="choiceButtons" destination="jmt-dn-c8G" collectionClass="NSMutableArray" id="4PH-eL-sNq"/>
-                        <outletCollection property="choiceButtons" destination="nnN-0m-NGw" collectionClass="NSMutableArray" id="aHv-nn-PfU"/>
-                        <outletCollection property="choiceButtons" destination="9ba-LY-fzj" collectionClass="NSMutableArray" id="oCA-wR-kYO"/>
+                        <outletCollection property="choiceButtons" destination="TvX-5b-E8C" collectionClass="NSMutableArray" id="Vez-0Q-73o"/>
+                        <outletCollection property="choiceButtons" destination="jmt-dn-c8G" collectionClass="NSMutableArray" id="Sba-pE-oCf"/>
+                        <outletCollection property="choiceButtons" destination="nnN-0m-NGw" collectionClass="NSMutableArray" id="sid-cg-9Cp"/>
+                        <outletCollection property="choiceButtons" destination="9ba-LY-fzj" collectionClass="NSMutableArray" id="5Ak-kB-2E7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L8Q-bd-SFG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
