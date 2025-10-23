@@ -1,42 +1,37 @@
-# Project 3 - *Trivia*
+# Project 4 - *Trivia 2.0*
 
 Submitted by: **Mohammed Abdur Rahman**
 
-**Trivia** is an app that lets you answer fun multiple-choice questions one by one, showing your score at the end and allowing you to restart the fun game!
+**NamTrivia** is an app that lets you answer fun multiple-choice or true/false questions one by one, up to 10, showing your score at the end and allowing you to replay the game with same set of questions or a new set of questions.
 
-Time spent: **7** hours spent in total
+
+
+Time spent: **5** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] User can view the current question and 4 different answers
-- [x] User can view the next question after tapping an answer
-- [x] User can answer at least 3 different questions
-
-
-The following **optional** features are implemented:
-
-- [x] User should be able to restart the game after they've finished answering all questions
+- [x] User can view and answer at least 5 trivia questions.
+- [x] App retrieves question data from the Open Trivia Database API.
+- [x] Fetch a different set of questions if the user indicates they would like to reset the game.
+- [x] Users can see score after submitting all questions.
+- [x] True or False questions only have two options.
 
 The following **additional** features are implemented:
 
 - [x] An app icon is available
+- [x] While the app is loading new trivia questions, the app displays the text: Loading questions
+- [x] Users can play with the hard-coded trivia questions in case the API response is unsuccessful.
 
 ## Video Walkthrough
+
 <div>
-    <a href="https://www.loom.com/share/f983f5bedb0345d3a1e0c8e850423c99"></a>
-    <a href="https://www.loom.com/share/f983f5bedb0345d3a1e0c8e850423c99">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f983f5bedb0345d3a1e0c8e850423c99-a843ce5e559287b5-full-play.gif">
+    <a href="https://www.loom.com/share/ed1070a710f24f4b90042327a8615f17"></a>
+    <a href="https://www.loom.com/share/ed1070a710f24f4b90042327a8615f17">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/ed1070a710f24f4b90042327a8615f17-437248e5646e6043-full-play.gif">
     </a>
 </div>
-
-## Notes
-
-Designing the UI was the hardest part of the project because of contraints and finding different options within Xcode.
-
-## UI Structure
-<img src="Docs/UI_Structure.jpg" alt="UI Structure" width="800"/>
 
 ## License
 
