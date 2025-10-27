@@ -33,6 +33,9 @@ The following **additional** features are implemented:
     </a>
 </div>
 
+## UI Structure
+<img src="Docs/UI_Structure.jpg" alt="UI Structure" width="800"/>
+
 ## License
 
     Copyright [2025] [Mohammed Abdur Rahman]
