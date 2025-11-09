@@ -16,27 +16,27 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.delegate = self
         fetchPosts()
 
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+            return posts.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+            let post = posts[indexPath.row]
 
-        let post = posts[indexPath.row]
+            cell.summaryLabel.text = post.summary
 
-        cell.summaryLabel.text = post.summary
+            if let photo = post.photos.first {
+                let url = photo.originalSize.url
+                NukeExtensions.loadImage(with: url, into: cell.postImageView)
+            }
 
-        if let photo = post.photos.first {
-            let url = photo.originalSize.url
-            NukeExtensions.loadImage(with: url, into: cell.postImageView)
-        }
-
-        return cell
+            return cell
     }
 
     func fetchPosts() {
@@ -78,4 +78,21 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         session.resume()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailSegue" {
+            let detailVC = segue.destination as! DetailViewController
+
+            if let indexPath = sender as? IndexPath {
+                detailVC.post = posts[indexPath.row]
+            }
+        }
+    }
 }
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowDetailSegue", sender: indexPath)
+    }
+}
+
