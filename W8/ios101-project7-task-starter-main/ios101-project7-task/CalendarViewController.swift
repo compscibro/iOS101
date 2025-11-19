@@ -99,6 +99,32 @@ class CalendarViewController: UIViewController {
             selection?.setSelected(todayComponents, animated: false)
         }
     }
+    
+    // Copied from TaskListViewController
+    // MARK: - Row Deletion
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+
+        // The task the user swiped to delete (from the *selected* list)
+        let taskToDelete = selectedTasks[indexPath.row]
+
+        // 1. Remove it from the selectedTasks array (table view's data source)
+        selectedTasks.remove(at: indexPath.row)
+
+        // 2. Remove the same task from the master tasks array using the id
+        if let indexInAll = tasks.firstIndex(where: { $0.id == taskToDelete.id }) {
+            tasks.remove(at: indexInAll)
+        }
+
+        // 3. Persist changes
+        Task.save(tasks)
+
+        // 4. Refresh calendar decorations + table view for consistency
+        refreshTasks()
+    }
+
 
     // Refresh tasks anytime the view appears in case updates to any tasks were made on another tab.
     override func viewWillAppear(_ animated: Bool) {

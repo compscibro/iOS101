@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB6B02662ECD4CCF00743349 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6B02652ECD4CCF00743349 /* QuotesViewController.swift */; };
 		CB602B9929247359006C6727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB602B9829247359006C6727 /* AppDelegate.swift */; };
 		CB602B9B29247359006C6727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB602B9A29247359006C6727 /* SceneDelegate.swift */; };
 		CB602B9D29247359006C6727 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB602B9C29247359006C6727 /* TaskListViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB6B02652ECD4CCF00743349 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		CB602B9529247359006C6727 /* ios101-project7-task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios101-project7-task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB602B9829247359006C6727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB602B9A29247359006C6727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				CB602B9C29247359006C6727 /* TaskListViewController.swift */,
 				CB602BAC292476F4006C6727 /* TaskCell.swift */,
 				ED7EC37529F0EFD000146345 /* TaskComposeViewController.swift */,
+				BB6B02652ECD4CCF00743349 /* QuotesViewController.swift */,
 				CB9D9ED0292483BC00F8F51B /* Task.swift */,
 				EDE386CF29F7892D007E714F /* CalendarViewController.swift */,
 				CB602B9E29247359006C6727 /* Main.storyboard */,
@@ -155,6 +158,7 @@
 				ED7EC37629F0EFD000146345 /* TaskComposeViewController.swift in Sources */,
 				CB602B9D29247359006C6727 /* TaskListViewController.swift in Sources */,
 				CB602B9929247359006C6727 /* AppDelegate.swift in Sources */,
+				BB6B02662ECD4CCF00743349 /* QuotesViewController.swift in Sources */,
 				CB602B9B29247359006C6727 /* SceneDelegate.swift in Sources */,
 				CB9D9ED1292483BC00F8F51B /* Task.swift in Sources */,
 			);

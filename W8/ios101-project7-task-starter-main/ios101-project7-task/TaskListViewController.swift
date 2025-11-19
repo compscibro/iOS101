@@ -164,6 +164,33 @@ extension TaskListViewController: UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
+    func tableView(_ tableView: UITableView,
+                   moveRowAt sourceIndexPath: IndexPath,
+                   to destinationIndexPath: IndexPath) {
+
+        // 1. Remove the task being moved from your local array
+        let movedTask = tasks.remove(at: sourceIndexPath.row)
+
+        // 2. Insert it at its new position
+        tasks.insert(movedTask, at: destinationIndexPath.row)
+
+        // 3. Persist the new order
+        Task.save(tasks)
+    }
+    
+////    // drag-to-reorder automatically
+//    func tableView(_ tableView: UITableView,
+//                   editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+//        return .none  // no red delete button
+//    }
+//    
+//    // show ONLY the reorder handle without edit mode
+    func tableView(_ tableView: UITableView,
+                   shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+
 }
 
 // MARK: - Table View Delegate Methods

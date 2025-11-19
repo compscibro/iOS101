@@ -353,11 +353,67 @@
                     <connections>
                         <segue destination="Wg7-xV-89h" kind="relationship" relationship="viewControllers" id="e2m-8h-z9v"/>
                         <segue destination="daT-oS-uAW" kind="relationship" relationship="viewControllers" id="MKa-41-MBe"/>
+                        <segue destination="6Nw-pL-Z7G" kind="relationship" relationship="viewControllers" id="LTb-PQ-hgm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pg-Ec-Jzr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-486" y="-456"/>
+        </scene>
+        <!--QuotesViewController-->
+        <scene sceneID="Jjt-K6-Xo1">
+            <objects>
+                <viewController id="cH9-cC-Avv" userLabel="QuotesViewController" customClass="QuotesViewController" customModule="ios101_project7_task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EPs-aj-jmw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cjY-sz-aqM">
+                                <rect key="frame" x="16" y="154" width="358" height="557"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-mh-FTd">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="557"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3A5-dU-sTM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="cjY-sz-aqM" secondAttribute="bottom" constant="16" id="78A-25-ETO"/>
+                            <constraint firstItem="cjY-sz-aqM" firstAttribute="leading" secondItem="3A5-dU-sTM" secondAttribute="leading" constant="16" id="lFi-bv-ga0"/>
+                            <constraint firstItem="3A5-dU-sTM" firstAttribute="trailing" secondItem="cjY-sz-aqM" secondAttribute="trailing" constant="16" id="nGe-8r-AAH"/>
+                            <constraint firstItem="cjY-sz-aqM" firstAttribute="top" secondItem="3A5-dU-sTM" secondAttribute="top" constant="16" id="roZ-gA-Ik6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quotes" id="utv-3G-bnw"/>
+                    <connections>
+                        <outlet property="quoteLabel" destination="wFb-mh-FTd" id="KCR-46-iiM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gq2-W3-w1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036.9230769230769" y="826.77725118483409"/>
+        </scene>
+        <!--Quotes-->
+        <scene sceneID="D0G-3V-d8R">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ja1-ew-mCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="6Nw-pL-Z7G" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Quotes" image="note" catalog="system" id="jHt-Uh-u4V"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7HB-eL-cTo">
+                        <rect key="frame" x="0.0" y="94" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cH9-cC-Avv" kind="relationship" relationship="rootViewController" id="c2n-by-XLZ"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1188" y="828"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="Ijw-fb-yMF">
@@ -383,6 +439,7 @@
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="circle" catalog="system" width="128" height="123"/>
         <image name="circle.inset.filled" catalog="system" width="128" height="123"/>
+        <image name="note" catalog="system" width="128" height="107"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">
