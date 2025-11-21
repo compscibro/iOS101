@@ -1,0 +1,15 @@
+Issues with Idea 1: CreditCarnival
+
+- There is no api that offers both the credit card pictures
+as well as the benefits.
+
+Progress with Idea 2: 
+
+- There is an api that offers stoic quotes and it is free.
+
+Therefore, complete Idea 2 as fast as possible and then if
+time permits, make your own FastAPI that will provide both
+the credit card images coupled with their benefits, and
+then build the CreditCarnival app, otherwise, polish the
+Idea 2: TaskStoic and make improvements, add new features, 
+and functionalities. 
